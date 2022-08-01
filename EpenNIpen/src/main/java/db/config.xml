@@ -4,14 +4,16 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-	<properties resource="db/db.properties"/>
-	
+	<properties resource="db/db.properties" />
+
 	<typeAliases>
-		<typeAlias type="model.MemberDTO" alias="MemberDTO"/>
-		<typeAlias type="model.MessageDTO" alias="MessageDTO"/>
-		<typeAlias type="model.FilterDTO" alias="FilterDTO"/>
+		<typeAlias type="model.MemberDTO" alias="MemberDTO" />
+		<typeAlias type="model.MessageDTO" alias="MessageDTO" />
+		<typeAlias type="model.FilterDTO" alias="FilterDTO" />
+		<typeAlias type="model.TableDTO" alias="TableDTO" />
+		<typeAlias type="model.SearchDTO" alias="SearchDTO" />
 	</typeAliases>
-	
+
 	<environments default="development">
 		<environment id="development">
 			<transactionManager type="JDBC" />
@@ -24,11 +26,14 @@
 		</environment>
 	</environments>
 	<mappers>
-		<mapper resource="mapper/MemberMapper.xml"/>
-		<mapper resource="mapper/MessageMapper.xml"/>
-		<mapper resource="mapper/FilterMapper.xml"/>
+		<mapper resource="mapper/MemberMapper.xml" />
+		<mapper resource="mapper/MessageMapper.xml" />
+		<mapper resource="mapper/FilterMapper.xml" />
+		<mapper resource="mapper/SearchMapper.xml" />
 	</mappers>
+
 </configuration>
+
 
 
 
