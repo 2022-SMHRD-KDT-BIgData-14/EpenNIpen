@@ -8,7 +8,6 @@
 
 	<typeAliases>
 		<typeAlias type="model.MemberDTO" alias="MemberDTO" />
-		<typeAlias type="model.MessageDTO" alias="MessageDTO" />
 		<typeAlias type="model.FilterDTO" alias="FilterDTO" />
 		<typeAlias type="model.TableDTO" alias="TableDTO" />
 		<typeAlias type="model.SearchDTO" alias="SearchDTO" />
@@ -30,7 +29,6 @@
 	<mappers>
 		<mapper resource="mapper/MemberMapper.xml" />
 		<mapper resource="mapper/SurveyMapper.xml"/>
-		<mapper resource="mapper/MessageMapper.xml" />
 		<mapper resource="mapper/FilterMapper.xml" />
 		<mapper resource="mapper/SearchMapper.xml" />
 		<mapper resource="mapper/SurveyMapper.xml"/>

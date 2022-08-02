@@ -165,14 +165,14 @@
 <!-- Breadcrumb Section End -->
 <div id="login">
     <div id="login_form"><!--로그인 폼-->
-        <form>
+        <form action="Login" method="post">
             <h3 class="login" style="letter-spacing:-1px;">로그인</h3>
            
             <hr>
         <label>
             <!-- <span>ID</span> -->
             <p style="text-align: left; font-size:15px; color:#666">Id</p>
-            <input type="text" placeholder="아이디를 입력" class="size">
+            <input type="text" placeholder="아이디를 입력" class="size" name="id">
             <!-- <input type="submit" value="확인"> -->
             <p></p>
         </label>
@@ -180,7 +180,7 @@
         <label>
             <!-- <span>PW</span> -->
         <p style="text-align: left; font-size:15px; color:#666">Password </p>
-        <input type="text" placeholder="비밀번호를 입력" class="size">
+        <input type="text" placeholder="비밀번호를 입력" class="size" name="pw">
         <!-- <input type="submit" value="확인"> -->
     </label>
     <br><br>
