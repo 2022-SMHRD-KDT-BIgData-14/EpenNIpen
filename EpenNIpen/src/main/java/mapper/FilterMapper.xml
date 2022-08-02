@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.FilterMapper">
+	<select id="showFilter" parameterType="FilterDTO" resultType="TableDTO">
+		select img, product, price, description_1 from Product_info where type_1=#{pencil, jdbcType=VARCHAR} or type_1=#{sharp, jdbcType=VARCHAR} or type_1=#{pen, jdbcType=VARCHAR} or type_1=#{highlighter, jdbcType=VARCHAR} or type_1=#{fountainPen, jdbcType=VARCHAR} or use_1=#{write, jdbcType=VARCHAR} or type_1=#{drawing, jdbcType=VARCHAR} or type_1=#{art, jdbcType=VARCHAR} or deep=#{B2, jdbcType=VARCHAR} or deep=#{B4, jdbcType=VARCHAR} or deep=#{B6, jdbcType=VARCHAR} or deep=#{H, jdbcType=VARCHAR} or deep=#{HB, jdbcType=VARCHAR} or shape=#{cover, jdbcType=VARCHAR} or shape=#{knock, jdbcType=VARCHAR} or shape=#{twist, jdbcType=VARCHAR} or ink=#{oil, jdbcType=VARCHAR} or ink=#{water, jdbcType=VARCHAR} or ink=#{gel, jdbcType=VARCHAR} or size_1=#{mm05, jdbcType=VARCHAR} or size_1=#{mm07, jdbcType=VARCHAR} or size_1=#{mm10, jdbcType=VARCHAR} or size_1=#{mm105, jdbcType=VARCHAR} or width=#{EF, jdbcType=VARCHAR} or width=#{F, jdbcType=VARCHAR} or width=#{M, jdbcType=VARCHAR} or width=#{B, jdbcType=VARCHAR} or ink_battery=#{cartridge, jdbcType=VARCHAR} or ink_battery=#{cc, jdbcType=VARCHAR} or ink_battery=#{plunger, jdbcType=VARCHAR} or grip=#{rubber, jdbcType=VARCHAR} or grip=#{metal, jdbcType=VARCHAR} or grip=#{plastic, jdbcType=VARCHAR} or grip=#{timber, jdbcType=VARCHAR} or grip=#{aluminum, jdbcType=VARCHAR}
+	</select>
+</mapper>
+

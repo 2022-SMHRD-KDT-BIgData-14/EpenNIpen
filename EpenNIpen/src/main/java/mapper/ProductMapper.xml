@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.ProductMapper">
+
+	<!-- 연필 제품 조회 -->
+	<select id="showPs" resultType="ProductDTO">
+		select * from Product_info where type_1='연필'
+	</select>
+	
+	<!-- 샤프 제품 조회 -->
+	<select id="showSp" resultType="ProductDTO">
+		select * from Product_info where type_1='샤프'
+	</select>
+	
+	<!-- 볼펜 제품 조회 -->
+	<select id="showBp" resultType="ProductDTO">
+		select * from Product_info where type_1='볼펜'
+	</select>
+	
+	<!-- 형광펜 제품 조회 -->
+	<select id="showHi" resultType="ProductDTO">
+		select * from Product_info where type_1='형광펜'
+	</select>
+	
+	<!-- 만년필 제품 조회 -->
+	<select id="showFp" resultType="ProductDTO">
+		select * from Product_info where type_1='만년필'
+	</select>
+	
+		<!-- 상세페이지 조회 -->
+	<select id="detailPage" parameterType="String" resultType="ProductDTO">
+		select * from Product_info where product=#{product}
+	</select>
+	
+</mapper>
