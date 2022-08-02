@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.QuestionMapper">
+
+<!-- 드림펜찾기 제출 -->
+ <insert id="insertQuestion" parameterType="QuestionDTO">
+ 	insert into Question values(q_seq.nextval, #{id}, #{answer})
+ </insert>
+
+<!-- 로그인한 계정의 드림펜찾기 내역 조회 -->
+<select id="MyQuestion" parameterType="String" resultType="QuestionDTO">
+	select * from Question where id=#{id} order by R_date desc
+</select>
+
+</mapper>

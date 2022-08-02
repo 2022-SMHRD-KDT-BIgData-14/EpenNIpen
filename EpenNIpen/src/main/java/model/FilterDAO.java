@@ -17,4 +17,13 @@ public class FilterDAO {
 		return filter_list;
 	}
 	
+	public ArrayList<FilterDTO> showReviewTop5() {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		ArrayList<FilterDTO> top_list = (ArrayList)session.selectList("showReviewTop5");
+		session.close();
+
+		return top_list;
+	}
+	
+	
 }

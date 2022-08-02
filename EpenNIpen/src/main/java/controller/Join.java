@@ -40,9 +40,6 @@ public class Join extends HttpServlet {
 		String moveURL=null;
 		if(row == 1) {
 			System.out.println("회원가입 성공");
-			// JoinSuccess.jsp
-			// 회원가입한 email 전송(request객체 활용)
-//			request.setAttribute("tel", tel);
 			moveURL="./MainPage.jsp";
 		}else {
 			System.out.println("회원가입 실패");

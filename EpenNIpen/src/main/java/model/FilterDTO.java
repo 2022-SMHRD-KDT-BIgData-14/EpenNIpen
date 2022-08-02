@@ -44,6 +44,5 @@ public class FilterDTO {
 	private String timber;
 	private String aluminum;
 	
-
 }
 

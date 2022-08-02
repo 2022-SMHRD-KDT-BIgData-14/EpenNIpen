@@ -46,11 +46,22 @@ public class MemberDAO {
 		return mem_list;
 	}
 
-	public int deleteMember(String email) {
+//	회원 탈퇴
+	public int deleteMember(String id) {
 		SqlSession session = sqlsessionFactory.openSession(true);
-		int row = session.delete("deleteMember", email);
+		int row = session.delete("deleteMember", id);
 		session.close();
 
+		return row;
+		
+	}
+	
+//	회원 탈퇴
+	public int SelfDeleteMember(String id) {
+		SqlSession session = sqlsessionFactory.openSession(true);
+		int row = session.delete("SelfDeleteMember", id);
+		session.close();
+		
 		return row;
 	}
 }

@@ -17,7 +17,14 @@ public class ProductDAO {
 		return wordcloudNamelist;
 	}
 	
-	
+//	Top5 출력
+	public ArrayList<ProductDTO> showReviewTop5() {
+		SqlSession session = sqlsessionFactory.openSession(true);
+		ArrayList<ProductDTO> top_list = (ArrayList)session.selectList("showReviewTop5");
+		session.close();
+
+		return top_list;
+	}	
 	
 //	연필 제품 조회
 	public ArrayList<ProductDTO> showPs(){

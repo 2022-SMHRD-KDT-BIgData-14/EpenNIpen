@@ -12,6 +12,8 @@
 		<typeAlias type="model.FilterDTO" alias="FilterDTO" />
 		<typeAlias type="model.TableDTO" alias="TableDTO" />
 		<typeAlias type="model.SearchDTO" alias="SearchDTO" />
+		<typeAlias type="model.SurveyDTO" alias="SurveyDTO"/>
+		<typeAlias type="model.ProductDTO" alias="ProductDTO"/>
 	</typeAliases>
 
 	<environments default="development">
@@ -27,9 +29,12 @@
 	</environments>
 	<mappers>
 		<mapper resource="mapper/MemberMapper.xml" />
+		<mapper resource="mapper/SurveyMapper.xml"/>
 		<mapper resource="mapper/MessageMapper.xml" />
 		<mapper resource="mapper/FilterMapper.xml" />
 		<mapper resource="mapper/SearchMapper.xml" />
+		<mapper resource="mapper/SurveyMapper.xml"/>
+		<mapper resource="mapper/ProductMapper.xml"/>
 	</mappers>
 
 </configuration>
