@@ -15,6 +15,10 @@
     li{
         margin-left: 5%;
     }
+    .login_bar{
+    background-color: #7fad39;
+    padding: 10px 0 13px
+}
 </style>
 <head>
     <meta charset="UTF-8">
@@ -77,8 +81,8 @@
                    </ul>
                </li>
                <li><a href="./Product-inq.jsp">Products</a></li>
-               <li><a href="./Event-Page.jsp">Recommend</a></li>
-               <li><a href="./Page-Sat.jsp">Contents</a></li>
+               <li><a href="./Event-Page.jsp">Contents</a></li>
+               <li><a href="./Page-Sat.jsp">Recommend</a></li>
            </ul>
        </nav>
        <div id="mobile-menu-wrap"></div>
@@ -122,8 +126,8 @@
                             <li class="active"><a href="./MainPage.jsp">Home</a></li>
                             <li><a href="./Product-Des.jsp">About</a></li>
                             <li><a href="./Product-inq.jsp">Products</a></li>
-                            <li><a href="./Event-Page.jsp">Recommend</a></li>
-                            <li><a href="./Page-Sat.jsp">Contents</a></li>
+                            <li><a href="./Event-Page.jsp">Contents</a></li>
+                            <li><a href="./Page-Sat.jsp">Recommend</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -149,18 +153,22 @@
                         </div>
                     </div>
                 </div>                
-            </div>
-            <div class="col-lg-12">
-                <div class="banner-img">
-                    <div class="hero__item set-bg" data-setbg="img/hero/필기구배너.png">
-                    </div>
-                </div>
-            </div>    
+            </div>   
         </div>
     </section>
     <!-- Hero Section End -->
+    
+    <!-- 초록바 -->
+<!--     <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+ -->				<div class="login_bar"></div>
+				<br><br><br>
+			<!-- </div>
+		</div>
+    </div> -->
 
-    <!-- Categories Section Begin -->
+	    <!-- Categories Section Begin -->
     <section class="categories">
         <div class="container">
             <div class="row">

@@ -30,22 +30,22 @@
               <div class="img">
                 <!-- input, label의 id, for 맞춰주기 -->
                 <input id="one" type="radio" name="answer_1" />
-                <label for="one"> <img src="img/05.jpg"> </label>
+                <label for="one"> <span>볼펜</span><br> <img src="img/05.jpg"> </label>
               </div>
               <div class="img">
                 <!-- input, label의 id, for 맞춰주기 -->
                 <input id="one" type="radio" name="answer_1" />
-                <label for="one"> <img src="img/06.jpg"> </label>
+                <label for="one"> 형광펜 <img src="img/06.jpg"> </label>
               </div>
               <div class="img">
                 <!-- input, label의 id, for 맞춰주기 -->
                 <input id="one" type="radio" name="answer_1" />
-                <label for="one"> <img src="img/07.jpg"> </label>
+                <label for="one">  <span>만년필</span><br><img src="img/07.jpg"> </label>
               </div>
               <div class="img">
                 <!-- input, label의 id, for 맞춰주기 -->
                 <input id="one" type="radio" name="answer_1" />
-                <label for="one"> <img src="img/08.jpg"> </label>
+                <label for="one"> 샤프 <img src="img/08.jpg"> </label>
               </div>
               
             </div>
@@ -179,7 +179,7 @@
             </div>
             <div class="btn_wrap btn_sort">
               <button class="prev_btn">이 전</button>
-                <input type="submit" value="제 출" class="submit_btn" />
+                <input type="button" value="제 출"  onclick="location.href='result.jsp'"class="submit_btn" />
             </div>
           </div>
         </form>

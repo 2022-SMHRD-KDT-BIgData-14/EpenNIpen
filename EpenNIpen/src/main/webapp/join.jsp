@@ -94,14 +94,11 @@
                <li class="active"><a href="./MainPage.jsp">Home</a></li>
                <li><a href="#">About</a>
                    <ul class="header__menu__dropdown">
-                       <li><a href="./shop-details.html">연필</a></li>
-                       <li><a href="./shoping-cart.html">샤프</a></li>
-                       <li><a href="./checkout.html">볼펜</a></li>
-                       <li><a href="./blog-details.html">형광펜</a></li>
-                       <li><a href="페이지 만들어야함">만년필</a></li>
+                       <li><a href="./Product-Des.jsp">개요</a></li>
+                       <li><a href="./Product-Des copy.jsp">구매Tip</a></li>
                    </ul>
                </li>
-               <li><a href="./Product-inq.jsp">Product</a></li>
+               <li><a href="./Product-inq.jsp">Products</a></li>
                <li><a href="./Event-Page.jsp">Recommend</a></li>
                <li><a href="./Page-Sat.jsp">Contents</a></li>
            </ul>

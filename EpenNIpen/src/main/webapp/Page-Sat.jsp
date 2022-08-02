@@ -86,8 +86,8 @@
                    </ul>
                </li>
                <li><a href="./Product-inq.jsp">Products</a></li>
-               <li><a href="./Event-Page.jsp">Recommend</a></li>
-               <li><a href="./Page-Sat.jsp">Contents</a></li>
+               <li><a href="./Event-Page.jsp">Contents</a></li>
+               <li><a href="./Page-Sat.jsp">Recommend</a></li>
            </ul>
        </nav>
        <div id="mobile-menu-wrap"></div>

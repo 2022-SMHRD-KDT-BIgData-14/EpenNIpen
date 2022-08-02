@@ -147,6 +147,13 @@
  .find a:hover{
      color:#707070;
  }
+
+.login_bar{
+    background-color: #7fad39;
+    padding: 10px 0 13px
+}
+
+
 /* 회원가입 끝 */
 
 html,
@@ -720,7 +727,7 @@ ol {
 	float: left;
 }
 
-.hero__search__form form .hero__search__categories {
+/* .hero__search__form form .hero__search__categories {
 	width: 30%;
 	float: left;
 	font-size: 16px;
@@ -729,7 +736,7 @@ ol {
 	padding-left: 18px;
 	padding-top: 11px;
 	position: relative;
-}
+} */
 
 .hero__search__form form .hero__search__categories:after {
 	position: absolute;
@@ -749,7 +756,8 @@ ol {
 }
 
 .hero__search__form form input {
-	width: 70%;
+	width: 100%;
+	text-align:center;
 	border: none;
 	height: 43px;
 	font-size: 16px;
@@ -3471,4 +3479,5 @@ Contact -> Page-Sat 으로 바꿈
 		font-size: larger;
 		background-color: #3CC032;
 	}
+	
 }
