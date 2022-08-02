@@ -22,7 +22,7 @@ public class TableDTO {
 	private String grip;
 	private String price;
 	private String url_1;
-	private String description;
+	private String description_1;
 	private String img;
 }
 

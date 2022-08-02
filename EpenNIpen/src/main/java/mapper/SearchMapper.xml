@@ -4,8 +4,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="mapper.SearchMapper">
+<!-- 필기구 검색 기능 -->
 	<select id="detailSearch" parameterType="SearchDTO" resultType="TableDTO">
-		select product, type_1, brand, price, url_1, img from Product_info where type_1=#{search, jdbcType=VARCHAR} or type_1=#{search, jdbcType=VARCHAR} or type_1=#{search, jdbcType=VARCHAR} or type_1=#{search, jdbcType=VARCHAR} or type_1=#{search, jdbcType=VARCHAR} or use_1=#{search, jdbcType=VARCHAR} or type_1=#{search, jdbcType=VARCHAR} or type_1=#{search, jdbcType=VARCHAR} or deep=#{search, jdbcType=VARCHAR} or deep=#{search, jdbcType=VARCHAR} or deep=#{search, jdbcType=VARCHAR} or deep=#{search, jdbcType=VARCHAR} or deep=#{search, jdbcType=VARCHAR} or shape=#{search, jdbcType=VARCHAR} or shape=#{search, jdbcType=VARCHAR} or shape=#{search, jdbcType=VARCHAR} or ink=#{search, jdbcType=VARCHAR} or ink=#{search, jdbcType=VARCHAR} or ink=#{search, jdbcType=VARCHAR} or size_1=#{search, jdbcType=VARCHAR} or size_1=#{search, jdbcType=VARCHAR} or size_1=#{search, jdbcType=VARCHAR} or size_1=#{search, jdbcType=VARCHAR} or width=#{search, jdbcType=VARCHAR} or width=#{search, jdbcType=VARCHAR} or width=#{search, jdbcType=VARCHAR} or width=#{search, jdbcType=VARCHAR} or ink_battery=#{search, jdbcType=VARCHAR} or ink_battery=#{search, jdbcType=VARCHAR} or ink_battery=#{search, jdbcType=VARCHAR} or grip=#{search, jdbcType=VARCHAR} or grip=#{search, jdbcType=VARCHAR} or grip=#{search, jdbcType=VARCHAR} or grip=#{search, jdbcType=VARCHAR} or grip=#{search, jdbcType=VARCHAR}	
+		select product, prod_seq, img from Product_info where type_1=#{search, jdbcType=VARCHAR} or type_1=#{search, jdbcType=VARCHAR} or type_1=#{search, jdbcType=VARCHAR} or type_1=#{search, jdbcType=VARCHAR} or type_1=#{search, jdbcType=VARCHAR} or use_1=#{search, jdbcType=VARCHAR} or type_1=#{search, jdbcType=VARCHAR} or type_1=#{search, jdbcType=VARCHAR} or deep=#{search, jdbcType=VARCHAR} or deep=#{search, jdbcType=VARCHAR} or deep=#{search, jdbcType=VARCHAR} or deep=#{search, jdbcType=VARCHAR} or deep=#{search, jdbcType=VARCHAR} or shape=#{search, jdbcType=VARCHAR} or shape=#{search, jdbcType=VARCHAR} or shape=#{search, jdbcType=VARCHAR} or ink=#{search, jdbcType=VARCHAR} or ink=#{search, jdbcType=VARCHAR} or ink=#{search, jdbcType=VARCHAR} or size_1=#{search, jdbcType=VARCHAR} or size_1=#{search, jdbcType=VARCHAR} or size_1=#{search, jdbcType=VARCHAR} or size_1=#{search, jdbcType=VARCHAR} or width=#{search, jdbcType=VARCHAR} or width=#{search, jdbcType=VARCHAR} or width=#{search, jdbcType=VARCHAR} or width=#{search, jdbcType=VARCHAR} or ink_battery=#{search, jdbcType=VARCHAR} or ink_battery=#{search, jdbcType=VARCHAR} or ink_battery=#{search, jdbcType=VARCHAR} or grip=#{search, jdbcType=VARCHAR} or grip=#{search, jdbcType=VARCHAR} or grip=#{search, jdbcType=VARCHAR} or grip=#{search, jdbcType=VARCHAR} or grip=#{search, jdbcType=VARCHAR}	
 	</select>
+	
+<!-- 상품 pk 숫자 뽑아오기 -->
+		<select id="showDetail" parameterType="int" resultType="TableDTO">
+		select * from Product_info where prod_seq=#{prod_seq} 
+		</select>
 
 </mapper>
