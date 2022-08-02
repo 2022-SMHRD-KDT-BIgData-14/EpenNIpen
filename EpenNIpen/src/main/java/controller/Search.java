@@ -19,6 +19,7 @@ public class Search extends HttpServlet {
 		
 		// 1. post방식 디코딩
 		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
 		
 		// 2. 데이터 받아오기
 		String search = request.getParameter("search");
@@ -33,7 +34,7 @@ public class Search extends HttpServlet {
 
 		// 4. 확인
 		if(search_list != null) {
-			System.out.println("검색 성공");
+			System.out.println("검색 성공");		
 			request.setAttribute("search_list", search_list);
 		}else {
 			System.out.println("검색 실패");
