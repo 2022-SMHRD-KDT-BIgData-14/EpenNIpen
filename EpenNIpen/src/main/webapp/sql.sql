@@ -16,3 +16,5 @@ select type_1 from PRODUCT_INFO where product='펜텔 그래프1000 리미티드
 select * from question
 
 select * from(select * from question where id='111' order by q_seq desc) where rownum=1
+
+select * from survey

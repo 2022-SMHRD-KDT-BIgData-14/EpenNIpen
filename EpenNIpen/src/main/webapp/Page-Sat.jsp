@@ -1,3 +1,4 @@
+<%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -48,6 +49,7 @@
 </head>
 
 <body>
+<% MemberDTO info = (MemberDTO)session.getAttribute("info");%>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -60,18 +62,42 @@
            <a href="#"><img src="img/logo.jpg" alt=""></a>
        </div>
        
-       <div class="header__top__right__auth">
-           <a href="join.jsp">Join</a>
-       </div>
-       <div class="header__top__right__auth">
-           <a href="login.jsp">Login</a>
-       </div>
-       <div class="header__top__right__auth">
-           <a href="#">Mypage</a>
-       </div>
-       <div class="humberger__menu__cart">
-           <a href="#"><i class="fa fa-heart"></i> </a>
-       </div>
+		<%
+		if(info == null) {
+		%>
+		<div class="header__top__right__auth">
+			<a href="join.jsp">Join</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="login.jsp">Login</a>
+		</div>
+		<%
+		} else if (info.getId().equals("admin")) {
+		%>
+		<div class="header__top__right__auth">
+			<a><%=info.getName()%>님, 환영합니다.</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="Logout">Logout</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="ShowMember.jsp">회원관리</a>
+		</div>
+		<%
+		} else {
+		%>
+		<div class="header__top__right__auth">
+			<a><%=info.getName()%>님, 환영합니다.</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="Logout">Logout</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="Mypage.jsp">Mypage</a>
+		</div>
+		<%
+		}
+		%>
        <div class="humberger__menu__widget">
 
 
@@ -101,18 +127,34 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="header__top__right">
+                        <%if(info==null){ %>
                             <div class="header__top__right__auth">
                                 <a href="join.jsp">Join</a>
                             </div>
                             <div class="header__top__right__auth">
                                 <a href="login.jsp">Login</a>
                             </div>
+                            <% }else if(info.getId().equals("admin")){%>
                             <div class="header__top__right__auth">
-                                <a href="#">Mypage</a>
+								<a><%=info.getName()%>님, 환영합니다.</a>
+							</div>
+                            <div class="header__top__right__auth">
+                                <a href="Logout">Logout</a>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="ShowMember.jsp">회원관리</a>
                             </div>
+                            <%}else{ %>
+                            <div class="header__top__right__auth">
+								<a><%=info.getName()%>님, 환영합니다.</a>
+							</div>
+                            <div class="header__top__right__auth">
+                                <a href="Logout">Logout</a>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a href="Mypage.jsp">Mypage</a>
+                            </div>
+                            <%} %>
                         </div>
                     </div>
                 </div>
@@ -204,11 +246,11 @@
                 </div>
             </div>
 
-            <form action="#">
+            <form action="InsertSurvey">
                 <div class="row">
                     
                     <div class="col-lg-12 text-center">
-                        <textarea placeholder="사이트 이용 후 느낀 점을 작성해주세요"></textarea>
+                        <textarea placeholder="사이트 이용 후 느낀 점을 작성해주세요" name="modify_1"></textarea>
                         <div>
                             <p>
                                 * 사용 후기는 익명으로 진행되며, 본 사이트의 발전에 도움이 됩니다.
@@ -216,8 +258,11 @@
                                 <br>
                             </p>
                         </div>
+                        <input type="hidden" name="id" value="<%= info.getId()%>">
                         <button type="submit" class="site-btn">완료</button>
                     </div>
+
+                    
                 </div>
             </form>
         </div>
