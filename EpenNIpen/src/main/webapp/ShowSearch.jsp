@@ -1,7 +1,8 @@
+<%@page import="com.google.gson.Gson"%>
 <%@page import="model.TableDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -11,7 +12,7 @@
 <meta name="keywords" content="Ogani, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>이펜니펜 | Search</title>
+<title>Ogani | Template</title>
 
 <!-- Google Font -->
 <link
@@ -27,7 +28,7 @@
 <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
-
+	<script src="js/jquery-3.3.1.min.js"></script>
 <style>
 filtertable {
 	width: 100%;
@@ -383,10 +384,11 @@ filtertable {
 								<input
 									type="submit" value="검색" onclick="data()" />
 								</div>
-
-										<script>
+								
+								
+  <script>
 		
-		// 실시간 필터링 보여주기--------------------------------------
+// 실시간 필터링 보여주기--------------------------------------------------------------------------------------------------------------------
 		var ageArr = {
 				pencil : null,
 				sharp : null,
@@ -461,7 +463,7 @@ filtertable {
 		}
 		
 		
-		// 필터된 추천 결과 보여주기-----------------------------------
+// 필터된 추천 결과 보여주기--------------------------------------------------------------------------------------------------------------------------
 		
 		function data(){	
 			console.log("aggAr", ageArr)
@@ -488,57 +490,40 @@ filtertable {
 			
 		} 
 		
- 		var total = 0;
- 		var bottomSize = 0;
-		
-		function makeFormat(res){
-			console.log("res:  " + res)
-			for(var i=0; i<res.length; i++){	
-				console.log('순서 :'+i)
-				console.log('결과 : '+res[i])
+		//폼 값을 URL로 전달하기
+		function getvalue(){
+	        var idx = document.getElementById('idx').value;
+	    	var datex = document.getElementById('datex').value;
+	    	var urll = 'm/'+idx+'/'+datex;
+	    	return urll;
+			}
 
+		function makeFormat(res){
+			console.log("filter res:  " + res)
+			for(var i=0; i<res.length; i++){	
+				console.log('순서 : '+i)
+				console.log('결과 : '+res[i])
+				console.log("res[i]_prod_seq: " + res[i].prod_seq)
+				
 				$("#showlist").append("<div class='col-lg-3 col-md-6 col-sm-6'></div>");
 				$("#showlist .col-lg-3").last().append("<div class='product__item' ></div>");
 				$("#showlist .col-lg-3 .product__item").last().append("<div class='product__item__pic set-bg showimg"+i+"'></div>");
 				$("#showlist .col-lg-3 .product__item .showimg"+i).css('background-image', "url("+res[i].img+")");
 				$("#showlist .col-lg-3 .product__item").last().append("<div class='product__item__text'></div>");
 				$("#showlist .col-lg-3 .product__item .product__item__text").last().append("<h6></h6>");
-				$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href=" + res[i].description_1 + ">" + res[i].product +"</a>");
-				//$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href= https://pendepot.co.kr//web/upload/pic/staedtler_mars_780c_p.jpg>" + res[i].product +"</a>");
-
+				$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href='ShowDetailFilPro.jsp?prod_seq="+ res[i].prod_seq + "'>" + res[i].product +"</a>");
+				/* $("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href=" + res[i].description_1 + ">" + res[i].product +"</a>"); */
+				//$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href=#>" + res[i].product +"</a>");
 				
 				$('#showFilter').val("")
-				
-				
+
 			}
 	
 		}	
-		</script>
+		</script> 
 		
-		<%ArrayList<TableDTO> search_list = (ArrayList)request.getAttribute("search_list");%>
-		<script>
 		
-		setTimeout(() => {
-		<% for(int i = 0 ; i<search_list.size(); i++){
-			TableDTO search = search_list.get(i);%>
-			$("#showlist").append("<div class='col-lg-3 col-md-6 col-sm-6'></div>");
-			$("#showlist .col-lg-3").last().append("<div class='product__item' ></div>");
-			$("#showlist .col-lg-3 .product__item").last().append("<div class='product__item__pic set-bg showimg"+i+"'></div>");
-			$("#showlist .col-lg-3 .product__item .showimg"+i).css("background-image", "url("<%=search.getImg()%>")");
-			$("#showlist .col-lg-3 .product__item").last().append("<div class='product__item__text'></div>");
-			$("#showlist .col-lg-3 .product__item .product__item__text").last().append("<h6></h6>");
-			$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href=#>"+"<%=search.getProduct()%>"+"</a>");
-<%-- 
-		<%= search.getProduct() %><br>
-		<%= search.getType_1() %><br>
-		<%= search.getBrand() %><br>
-		<%= search.getPrice() %><br>
-		<%= search.getUrl_1() %>
-		<img src = "<%= search.getImg() %>"> --%>
-	<%} %>
-		}, 1000);
-	</script> 
-
+ 	
 
 
 <!-- ----------------------------------------------------------------------------------------------------------- -->
@@ -682,15 +667,17 @@ filtertable {
 								</div>
 							</div>
 							
-<!-- ----------------------- 필터된 상품 보여주기  -------------------------- -->		
+<!-- ----------------------- 필터된 상품 보여주기  -------------------------- -->	
 					
 							<div id= "showlist" class="row">								
-										<div class="product__item__text">
+										<!-- <div class="product__item__text">
 											<h6>
 												<a href="#"></a>
 											</h6>
-										</div>							
+										</div>		 -->					
 							</div>
+							
+							
 
 							
 <!-- 							<div class="product__pagination">
@@ -703,6 +690,36 @@ filtertable {
 					</div>
 				</div>
 	</section>
+	
+	<script>
+		<%ArrayList<TableDTO> search_list = (ArrayList)request.getAttribute("search_list");
+			String json = new Gson().toJson(search_list);%>
+
+		
+		var search_list = <%= json %>
+		console.log("search_list: ", search_list)
+		console.log("search_list: ", search_list[0].product)
+		console.log("search_list: ", search_list[0].img)
+
+		for(var i = 0 ; i<search_list.length; i++){
+ 			console.log("search_list: ", search_list[i].product)
+			console.log("search_list: ", search_list[i].img) 
+
+			$("#showlist").append("<div class='col-lg-3 col-md-6 col-sm-6'></div>");
+			$("#showlist .col-lg-3").last().append("<div class='product__item' ></div>");
+			$("#showlist .col-lg-3 .product__item").last().append("<div class='product__item__pic set-bg showimg"+i+"'></div>");
+			$("#showlist .col-lg-3 .product__item .showimg"+i).last().append("<img src='" + search_list[i].img + "'>")
+			/* $("#showlist .col-lg-3 .product__item .showimg"+i).css('background-image', "url("+search_list[i].img+")"); */
+			$("#showlist .col-lg-3 .product__item").last().append("<div class='product__item__text'></div>");
+			$("#showlist .col-lg-3 .product__item .product__item__text").last().append("<h6></h6>");
+			$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href='ShowDetailPro.jsp?prod_seq="+ search_list[i].prod_seq + "'>" + search_list[i].product +"</a>");
+			name = search_list[i].product
+			$('#showFilter').val("")
+
+	}
+
+	</script> 
+	
 	<!-- Product Section End -->
 
 	<!-- Footer Section Begin -->
@@ -724,7 +741,7 @@ filtertable {
 	<!-- Footer Section End -->
 
 	<!-- Js Plugins -->
-	<script src="js/jquery-3.3.1.min.js"></script>
+
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.nice-select.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>

@@ -46,115 +46,122 @@ filtertable {
 		<div class="loader"></div>
 	</div>
 
-   <!-- 반응형 리스트Humberger Begin -->
-   <div class="humberger__menu__overlay"></div>
-   <div class="humberger__menu__wrapper">
-       <div class="humberger__menu__logo">
-           <a href="#"><img src="img/logo.jpg" alt=""></a>
-       </div>
-       
-       <div class="header__top__right__auth">
-           <a href="join.jsp">Join</a>
-       </div>
-       <div class="header__top__right__auth">
-           <a href="login.jsp">Login</a>
-       </div>
-       <div class="header__top__right__auth">
-           <a href="#">Mypage</a>
-       </div>
-       <div class="humberger__menu__cart">
-           <a href="#"><i class="fa fa-heart"></i> </a>
-       </div>
-       <div class="humberger__menu__widget">
+	<!-- 반응형 리스트Humberger Begin -->
+	<div class="humberger__menu__overlay"></div>
+	<div class="humberger__menu__wrapper">
+		<div class="humberger__menu__logo">
+			<a href="#"><img src="img/logo.jpg" alt=""></a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="#"><i class="fa fa-user"></i>로그인</a>
+		</div>
+		<div class="humberger__menu__cart">
+			<a href="#"><i class="fa fa-heart"></i> </a>
+		</div>
+		<div class="humberger__menu__widget"></div>
+		<nav class="humberger__menu__nav mobile-menu">
+			<ul>
+				<li class="active"><a href="./MainPage.html">이펜니펜은?</a></li>
+				<li><a href="#">제품설명</a>
+					<ul class="header__menu__dropdown">
+						<li><a href="./shop-details.html">연필</a></li>
+						<li><a href="./shoping-cart.html">샤프</a></li>
+						<li><a href="./checkout.html">볼펜</a></li>
+						<li><a href="./blog-details.html">형광펜</a></li>
+						<li><a href="페이지 만들어야함">만년필</a></li>
+					</ul></li>
+				<li><a href="./Product-inq.html">상품조회</a></li>
+				<li><a href="./Event-Page.html">이벤트페이지</a></li>
+				<li><a href="./Page-Sat.html">페이지만족도 조사</a></li>
+			</ul>
+		</nav>
+		<div id="mobile-menu-wrap"></div>
+	</div>
+	<!-- Humberger End -->
+
+	<!--최상단 검색 페이지 클릭
+        Header Section Begin -->
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="header__top__right">
+							<div class="header__top__right__auth">
+								<a href="#"><i class="fa fa-user"></i> 로그인</a>
+							</div>
+							<div class="header__top__right__auth">
+								<a href="#"><i class="fa fa-heart"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="header__logo">
+						<a href="./MainPage.html"><img src="img/logo.jpg" alt=""></a>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<nav class="header__menu">
+						<ul>
+							<li class="active"><a href="./MainPage.html">이펜니펜?</a></li>
+							<li><a href="./Product-Des.html">제품설명</a></li>
+							<li><a href="./Product-inq.html">상품조회</a></li>
+							<li><a href="./Event-Page.html">이벤트페이지</a></li>
+							<li><a href="./Page-Sat.html">페이지만족도조사</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="humberger__open">
+				<i class="fa fa-bars"></i>
+			</div>
+		</div>
+	</header>
+	<!-- Header Section End -->
 
 
-       </div>
-       <nav class="humberger__menu__nav mobile-menu">
-           <ul>
-               <li class="active"><a href="./MainPage.jsp">Home</a></li>
-               <li><a href="#">About</a>
-                   <ul class="header__menu__dropdown">
-                       <li><a href="./Product-Des.jsp">개요</a></li>
-                       <li><a href="./Product-Des copy.jsp">구매Tip</a></li>
-                   </ul>
-               </li>
-               <li><a href="./Product-inq.jsp">Products</a></li>
-               <li><a href="./Event-Page.jsp">Recommend</a></li>
-               <li><a href="./Page-Sat.jsp">Contents</a></li>
-           </ul>
-       </nav>
-       <div id="mobile-menu-wrap"></div>
-   </div>
-   <!-- Humberger End -->
+	<!-- 제품 조회, 검색
+        Hero Section Begin -->
+	<section class="hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="hero__categories">
+						<div class="hero__categories__all">
+							<i class="fa fa-bars"></i> <span>제품조회</span>
+						</div>
+						<ul>
+							<li><a href="#">연필</a></li>
+							<li><a href="#">샤프</a></li>
+							<li><a href="#">볼펜</a></li>
+							<li><a href="#">형광펜</a></li>
+							<li><a href="#">만년필</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="hero__search">
+						<div class="hero__search__form">
+							<form action="#">
+								<div class="hero__search__categories">
+									제품조회 <span class="arrow_carrot-down"></span>
+								</div>
+								<input type="text" placeholder="원하는 니펜은?">
+								<button type="submit" class="site-btn">검색</button>
+							</form>
+						</div>
+					</div>
 
-    <!--최상단 Header Section Begin -->
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="header__top__right">
-                            <div class="header__top__right__auth">
-                                <a href="join.jsp">Join</a>
-                            </div>
-                            <div class="header__top__right__auth">
-                                <a href="login.jsp">Login</a>
-                            </div>
-                            <div class="header__top__right__auth">
-                                <a href="#">Mypage</a>
-                            </div>
-                            <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="header__logo">
-                        <a href="./MainPage.jsp"><img src="img/logo.jpg" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-6" >
-                    <nav class="header__menu">
-                        <ul>
-                            <li class="active"><a href="./MainPage.jsp">Home</a></li>
-                            <li><a href="./Product-Des.jsp">About</a></li>
-                            <li><a href="./Product-inq.jsp">Products</a></li>
-                            <li><a href="./Event-Page.jsp">Recommend</a></li>
-                            <li><a href="./Page-Sat.jsp">Contents</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="humberger__open">
-                <i class="fa fa-bars"></i>
-            </div>
-        </div>
-    </header>
-    <!-- Header Section End -->
-
-    <!-- 메인 중간 배너 Hero Section Begin -->
-    <section class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="hero__search">
-                        <div class="hero__search__form">
-                            <form action="#">
-                                <input type="text" placeholder="당신이 원하는 펜은 무엇인가요?">
-                                <button type="submit" class="site-btn">검색</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>                
-            </div>   
-        </div>
-    </section>
-    <!-- Hero Section End -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Hero Section End -->
 
 	<!-- 중간 배너 그림 멘트
         Breadcrumb Section Begin -->
@@ -209,6 +216,8 @@ filtertable {
 												<h6>2열</h6>
 											</div>
 										</a>
+										
+										<!-- 최근 본 상품 2열 ↑-->
 									</div>
 								</div>
 							</div>
@@ -482,12 +491,9 @@ filtertable {
 		function makeFormat(res){
 			
 			for(var i=0; i<res.length; i++){	
-				console.log('순서 :'+i)
+				console.log('순서 : '+i)
 				console.log('결과 : '+res[i])
-				
-				
-				
-				
+				console.log("res[i]_prod_seq: " + res[i].prod_seq)
 				
 				$("#showlist").append("<div class='col-lg-3 col-md-6 col-sm-6'></div>");
 				$("#showlist .col-lg-3").last().append("<div class='product__item' ></div>");
@@ -495,13 +501,12 @@ filtertable {
 				$("#showlist .col-lg-3 .product__item .showimg"+i).css('background-image', "url("+res[i].img+")");
 				$("#showlist .col-lg-3 .product__item").last().append("<div class='product__item__text'></div>");
 				$("#showlist .col-lg-3 .product__item .product__item__text").last().append("<h6></h6>");
-				$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href=" + res[i].description_1 + ">" + res[i].product +"</a>");
-				//$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href= https://pendepot.co.kr//web/upload/pic/staedtler_mars_780c_p.jpg>" + res[i].product +"</a>");
-
+				$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href='ShowDetailFilPro.jsp?prod_seq="+ res[i].prod_seq + "'>" + res[i].product +"</a>");
+				/* $("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href=" + res[i].description_1 + ">" + res[i].product +"</a>"); */
+				//$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href=#>" + res[i].product +"</a>");
 				
 				$('#showFilter').val("")
-				
-				
+
 			}
 	
 			
@@ -509,10 +514,6 @@ filtertable {
 
 
 	</script>
-
-
-<!-- ----------------------------------------------------------------------------------------------------------- -->
-
 
 <!-- ----------------------------추천하기---------------------------- -->
 

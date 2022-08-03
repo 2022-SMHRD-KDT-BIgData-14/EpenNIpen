@@ -146,8 +146,10 @@
                 <div class="col-lg-12">
                     <div class="hero__search">
                         <div class="hero__search__form">
-                            <form action="#">
-                                <input type="text" placeholder="당신이 원하는 펜은 무엇인가요?">
+                        <!-- 수아 여기 수정 -->
+                            <form action="Search">
+                            														<!-- 수아 여기 수정 -->
+                                <input type="text" placeholder="당신이 원하는 펜은 무엇인가요?" name="search">
                                 <button type="submit" class="site-btn">검색</button>
                             </form>
                         </div>

@@ -1,3 +1,4 @@
+<%@page import="model.FilterDAO"%>
 <%@page import="com.google.gson.Gson"%>
 <%@page import="model.TableDTO"%>
 <%@page import="java.util.ArrayList"%>
@@ -256,19 +257,19 @@ background-size: 300px 150px;
 <%
 				// 사용자가 클릭한 제품을 식별할 수 있는 제품명 통신
 				int prod_seq = Integer.parseInt(request.getParameter("prod_seq"));
-				TableDTO detail_num = new SearchDAO().showDetail(prod_seq);
+				TableDTO detail_fil_num = new FilterDAO().showFilDetail(prod_seq);
 %> 
 			<table>
 				<tr>
-					<td><img src= "<%= detail_num.getImg() %>" ></td>
-					<td><h4><%= detail_num.getProduct() %></h4></td>
+					<td><img src= "<%= detail_fil_num.getImg() %>" ></td>
+					<td><h4><%= detail_fil_num.getProduct() %></h4></td>
 				</tr>
 			
 			
 			</table>
 			<%-- <h4><%= detail_num.getProduct() %></h4> --%>
 <%-- 			<img src= "<%= detail_num.getImg() %>" > --%>
-			<img src= "<%= detail_num.getDescription_1() %>"> 
+			<img src= "<%= detail_fil_num.getDescription_1() %>"> 
 				
 							</div>
 						</div>
