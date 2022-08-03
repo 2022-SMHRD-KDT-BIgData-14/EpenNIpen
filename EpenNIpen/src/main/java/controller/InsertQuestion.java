@@ -17,6 +17,7 @@ public class InsertQuestion extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+//		깃테스트
 		System.out.println("[InsertQuestion]");
 
 		request.setCharacterEncoding("UTF-8");
