@@ -505,6 +505,8 @@ filtertable {
 				console.log('결과 : '+res[i])
 				console.log("res[i]_prod_seq: " + res[i].prod_seq)
 				
+				//$("#showlist").remove();
+				
 				$("#showlist").append("<div class='col-lg-3 col-md-6 col-sm-6'></div>");
 				$("#showlist .col-lg-3").last().append("<div class='product__item' ></div>");
 				$("#showlist .col-lg-3 .product__item").last().append("<div class='product__item__pic set-bg showimg"+i+"'></div>");
@@ -553,12 +555,13 @@ filtertable {
 									
 										<div class="col-lg-4">
 											<div class="product__discount__item">
-												<div class="product__discount__item__pic set-bg"
-													data-setbg="img/product/discount/pd-1.jpg">
+												<div class="product__discount__item__pic set-bg">
+													<img src="https:////pendepot.co.kr/web/product/medium/202103/831cf20935711a52325bfd97d02f6342.jpg">
+													<!-- data-setbg="img/product/discount/pd-1.jpg"> -->
 												</div>
 												<div class="product__discount__item__text">
 													<h5>
-														<a href="#"> 파카 조터 스텐레스 스틸 CT 샤프</a>
+														<a href="#">라미 사파리 스페셜 에디션 오리진 만년필 EF촉 볼펜 (한정판)</a>
 													</h5>
 												</div>
 											</div>
@@ -568,8 +571,9 @@ filtertable {
 										
 									 	<div class="col-lg-4">
 											<div class="product__discount__item">
-												<div class="product__discount__item__pic set-bg"
-													data-setbg="img/product/discount/pd-2.jpg">
+												<div class="product__discount__item__pic set-bg">
+												<img src="http://pendepot.co.kr/web/product/big/202203/8ee651b48a037597a1469d444b24afe6.jpg">
+													<!-- data-setbg="img/product/discount/pd-2.jpg"> -->
 													<div class="product__discount__percent">추천!</div>
 													<ul class="product__item__pic__hover">
 														<li><a href="#"><i class="fa fa-heart"></i></a></li>
@@ -578,17 +582,17 @@ filtertable {
 													</ul>
 												</div>
 												<div class="product__discount__item__text">
-													<span>Vegetables</span>
 													<h5>
-														<a href="#">Vegetables’package</a>
+														<a href="#">유니 제트스트림 3색 507 볼펜 한정판 [SXE3-507-05]</a>
 													</h5>
 												</div>
 											</div>
 										</div>
 										<div class="col-lg-4">
 											<div class="product__discount__item">
-												<div class="product__discount__item__pic set-bg"
-													data-setbg="img/product/discount/pd-3.jpg">
+												<div class="product__discount__item__pic set-bg">
+												<img src="http://pendepot.co.kr/web/product/big/202206/7d951b769f9f403a1aa98834524ca035.jpg">
+													<!-- data-setbg="img/product/discount/pd-3.jpg"> -->
 													<div class="product__discount__percent">추천!</div>
 													<ul class="product__item__pic__hover">
 														<li><a href="#"><i class="fa fa-heart"></i></a></li>
@@ -597,17 +601,17 @@ filtertable {
 													</ul>
 												</div>
 												<div class="product__discount__item__text">
-													<span>Dried Fruit</span>
 													<h5>
-														<a href="#">Mixed Fruitss</a>
+														<a href="#">파이롯트 프릭션 3색 볼펜 슬림 컬러풀 [한정판매]</a>
 													</h5>
 												</div>
 											</div>
 										</div>
 										<div class="col-lg-4">
 											<div class="product__discount__item">
-												<div class="product__discount__item__pic set-bg"
-													data-setbg="img/product/discount/pd-4.jpg">
+												<div class="product__discount__item__pic set-bg">
+												<img src="http://pendepot.co.kr/web/product/big/201605/3797_shop1_573400.jpg">
+													<!-- data-setbg="img/product/discount/pd-2.jpg"> -->
 													<div class="product__discount__percent">추천!</div>
 													<ul class="product__item__pic__hover">
 														<li><a href="#"><i class="fa fa-heart"></i></a></li>
@@ -616,17 +620,17 @@ filtertable {
 													</ul>
 												</div>
 												<div class="product__discount__item__text">
-													<span>Dried Fruit</span>
 													<h5>
-														<a href="#">Raisin’n’nuts</a>
+														<a href="#">미쯔비시 유니 시그노 노크식 RT1 겔잉크 볼펜 0.28/0.38mm [UMN-155-28/38]</a>
 													</h5>
 												</div>
 											</div>
 										</div>
 										<div class="col-lg-4">
 											<div class="product__discount__item">
-												<div class="product__discount__item__pic set-bg"
-													data-setbg="img/product/discount/pd-5.jpg">
+												<div class="product__discount__item__pic set-bg">
+												<img src="http://pendepot.co.kr/web/product/big/202206/9843f937590ee12c9f869e259b82e501.jpg">
+												<!-- 	data-setbg="img/product/discount/pd-5.jpg"> -->
 													<div class="product__discount__percent">추천!</div>
 													<ul class="product__item__pic__hover">
 														<li><a href="#"><i class="fa fa-heart"></i></a></li>
@@ -635,17 +639,16 @@ filtertable {
 													</ul>
 												</div>
 												<div class="product__discount__item__text">
-													<span>Dried Fruit</span>
 													<h5>
-														<a href="#">Raisin’n’nuts</a>
+														<a href="#">스테들러 샤프 925 35 블랙 0.5mm</a>
 													</h5>
 												</div>
 											</div>
 										</div>
 										<div class="col-lg-4">
 											<div class="product__discount__item">
-												<div class="product__discount__item__pic set-bg"
-													data-setbg="img/product/discount/pd-6.jpg">
+												<div class="product__discount__item__pic set-bg">
+												<img src="http://pendepot.co.kr/web/product/big/201707/3062_shop1_949181.jpg">
 													<div class="product__discount__percent">추천!</div>
 													<ul class="product__item__pic__hover">
 														<li><a href="#"><i class="fa fa-heart"></i></a></li>
@@ -654,9 +657,8 @@ filtertable {
 													</ul>
 												</div>
 												<div class="product__discount__item__text">
-													<span>Dried Fruit</span>
 													<h5>
-														<a href="#">Raisin’n’nuts</a>
+														<a href="#">제브라 마일드라이너 트윈형광펜 기본5색세트 [WKT7-5C]</a>
 													</h5>
 												</div>
 											</div>
@@ -705,6 +707,7 @@ filtertable {
  			console.log("search_list: ", search_list[i].product)
 			console.log("search_list: ", search_list[i].img) 
 
+			//$("#showlist").remove();
 			$("#showlist").append("<div class='col-lg-3 col-md-6 col-sm-6'></div>");
 			$("#showlist .col-lg-3").last().append("<div class='product__item' ></div>");
 			$("#showlist .col-lg-3 .product__item").last().append("<div class='product__item__pic set-bg showimg"+i+"'></div>");

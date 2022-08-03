@@ -52,6 +52,14 @@ background-size: 300px 150px;
 
 <body>
 
+				
+<%-- <%
+				// 사용자가 클릭한 제품을 식별할 수 있는 제품명 통신
+				int prod_seq = Integer.parseInt(request.getParameter("prod_seq"));
+				TableDTO detail_fil_num = new FilterDAO().showFilDetail(prod_seq);
+%> 
+	 --%>
+
 
 	<!-- ---------------상품 조회------------- -->
 
@@ -205,36 +213,85 @@ background-size: 300px 150px;
 					<div class="sidebar">	
 
 						<!-- 최근 본 상품 -->
+<%
+				// 사용자가 클릭한 제품을 식별할 수 있는 제품명 통신
+				int prod_seq = Integer.parseInt(request.getParameter("prod_seq"));
+				TableDTO detail_fil_num = new FilterDAO().showFilDetail(prod_seq);
+%> 
+	
 
 						<div class="sidebar__item">
+						<!-- 볼펜 최저가 -->
+						<% if(detail_fil_num.getProd_seq() == 273 ){ %>
+		
 							<div class="latest-product__text">
-								<h4>최근 본 상품</h4>
+								<h4>제품 최저가</h4>
 								<div class="latest-product__slider owl-carousel">
 									<div class="latest-prdouct__slider__item">
-										<a href="#" class="latest-product__item">
+										<a href="https://www.coupang.com/vp/products/5862511582?itemId=10233795516&vendorItemId=81554436685&src=1032001&spec=10305201&addtag=400&ctag=5862511582&lptag=P5862511582&itime=20220803101038&pageType=PRODUCT&pageValue=5862511582&wPcid=16594890383087243690697&wRef=cr.shopping.naver.com&wTime=20220803101038&redirect=landing&isAddedCart=" class="latest-product__item">
 											<div class="latest-product__item__pic">
-												<img src="img/latest-product/lp-1.jpg" alt="">
+											
+												<img src="https://blog.kakaocdn.net/dn/6ui8u/btqDtzRrCzg/ZM8q87L5frjEl0za6UnIk1/img.jpg" alt="">
 											</div>
 											<div class="latest-product__item__text">
-												<h6>1열</h6>
+											<!-- <h6>5,040원</h6> -->
 											</div>
 										</a>
-										<!-- 최근 본 상품 더 보여주고 싶으면 여기에 a태그해서 추가 -->
+										<h4>5,040원</h4>
 									</div>
 									<div class="latest-prdouct__slider__item">
-										<a href="#" class="latest-product__item">
+										<a href="https://www.hmall.com/p/pda/itemPtc.do?ReferCode=429&slitmCd=2068711191&utm_source=naver&utm_medium=cps_pcs&utm_campaign=sale&NaPm=ct%3Dl6cwzr5c%7Cci%3D11acf5403c1738040ad90a75531eb3dd42bd227a%7Ctr%3Dslct%7Csn%3D14%7Chk%3Db7561b43325f7421aa1f9472d973755a8ab82e35" class="latest-product__item">
 											<div class="latest-product__item__pic">
-												<img src="img/latest-product/lp-1.jpg" alt="">
+												<img src="https://blog.kakaocdn.net/dn/bATAYv/btqBD2OfDwv/jI6jmfOkbiaQB1VUMArMZk/img.jpg" alt="">
 											</div>
 											<div class="latest-product__item__text">
-												<h6>2열</h6>
+												<!-- <h6>6,630원</h6> -->
 											</div>
 										</a>
+										<h4>6,630원</h4>
 										
-										<!-- 최근 본 상품 2열 ↑-->
 									</div>
 								</div>
 							</div>
+							<!-- 만년필 최저가 -->
+							<%}else if(detail_fil_num.getProd_seq() == 236 ){ %>
+		
+							<div class="latest-product__text">
+								<h4>제품 최저가</h4>
+								<div class="latest-product__slider owl-carousel">
+									<div class="latest-prdouct__slider__item">
+										<a href="http://item.gmarket.co.kr/DetailView/Item.asp?goodscode=2431378993&GoodsSale=Y&jaehuid=200001169&NaPm=ct%3Dl6da44js%7Cci%3De9a4f81a9cbc2566708586b54db250419c8ab361%7Ctr%3Dslsl%7Csn%3D24%7Chk%3D9d41b0e3f56f96f1d56d8f41fca17344e8ac72b8" class="latest-product__item">
+											<div class="latest-product__item__pic">
+											
+												<img src="https://blog.kakaocdn.net/dn/cHPIUX/btqCzB5fRlU/SbZTqWXHI3HvBeuMWbJkGK/img.jpg" alt="">
+											</div>
+											<div class="latest-product__item__text">
+											<!-- <h6>5,040원</h6> -->
+											</div>
+										</a>
+										<h4>11,180원</h4>
+									</div>
+									<div class="latest-prdouct__slider__item">
+										<a href="https://www.lotteon.com/p/product/LO1789079236?sitmNo=LO1789079236_1789079237&ch_no=100065&ch_dtl_no=1000030&entryPoint=pcs&dp_infw_cd=CHT&NaPm=ct%3Dl6da9zyw%7Cci%3D0779b7570217080d153b260c6a0a00c2fe695fca%7Ctr%3Dslsl%7Csn%3D1243359%7Chk%3D6419a3ebd10c08fba2d82a1234bbb06b41b3ab24" class="latest-product__item">
+											<div class="latest-product__item__pic">
+												<img src="https://blog.kakaocdn.net/dn/VJTCY/btqwPAhVtz4/W4dOFbW8A0X7JioNO9XfKk/img.jpg" alt="">
+											</div>
+											<div class="latest-product__item__text">
+												<!-- <h6>6,630원</h6> -->
+											</div>
+										</a>
+										<h4>18,220원</h4>
+										
+									</div>
+								</div>
+							</div>
+							
+							<%}else{ %>
+							<script>
+							$("#sidebar__item").remove();
+							</script>
+							
+							<%} %>
 						</div>
 					</div>
 				</div>
@@ -254,21 +311,12 @@ background-size: 300px 150px;
 							<div class="select-filter"> 
 							
 				
-<%
+<%-- <%
 				// 사용자가 클릭한 제품을 식별할 수 있는 제품명 통신
 				int prod_seq = Integer.parseInt(request.getParameter("prod_seq"));
 				TableDTO detail_fil_num = new FilterDAO().showFilDetail(prod_seq);
 %> 
-			<table>
-				<tr>
-					<td><img src= "<%= detail_fil_num.getImg() %>" ></td>
-					<td><h4><%= detail_fil_num.getProduct() %></h4></td>
-				</tr>
-			
-			
-			</table>
-			<%-- <h4><%= detail_num.getProduct() %></h4> --%>
-<%-- 			<img src= "<%= detail_num.getImg() %>" > --%>
+	 --%>		
 			<img src= "<%= detail_fil_num.getDescription_1() %>"> 
 				
 							</div>

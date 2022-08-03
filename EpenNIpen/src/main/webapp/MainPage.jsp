@@ -216,11 +216,11 @@
                     </div>
                     <div class="featured__controls">
                         <ul>
-                            <li class="active" data-filter="*">연필</li>
-                            <li data-filter=".oranges">샤프</li>
-                            <li data-filter=".fresh-meat">볼펜</li>
-                            <li data-filter=".vegetables">형광펜</li>
-                            <li data-filter=".fastfood">만년필</li>
+                            <li class="active" data-filter="*">ALL</li>
+                            <li data-filter=".oranges">인기 필기구</li>
+                            <li data-filter=".fresh-meat">브랜드별</li>
+                            <li data-filter=".vegetables">취업준비생</li>
+                            <li data-filter=".fastfood">사무용품</li>
                         </ul>
                     </div>
                 </div>
@@ -229,82 +229,82 @@
                 <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
                     <div class="featured__item">
                                                 <div class="featured__item__pic set-bg">
-                        	<img src="https://pendepot.co.kr/web/product/medium/201708/2344_shop1_347812.jpg">
+                        	<img src="https://pendepot.co.kr/web/product/medium/202203/9465ad21cf01dd05db91b078bf1bb3c4.jpg">
                             <ul class="featured__item__pic__hover">
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">파버카스텔 보난자1320 지우개 연필</a></h6>
+                            <h6><a href="https://pendepot.co.kr//web/upload/pic2/uni_jetstream_sxe3-507-LTD_p.jpg">유니 제트스트림 3색 507 볼펜 한정판 [SXE3-507-05]</a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg">
-                        	<img src="https://pendepot.co.kr/web/product/medium/201612/1276_shop1_971480.jpg">
+                        	<img src="https://pendepot.co.kr/web/product/medium/201707/3057_shop1_343850.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">스테들러 옐로우 펜슬 1DZ</a></h6>
+                            <h6><a href="https://pendepot.co.kr//web/upload/pic2/zebra_mildliner_highlighter_wkt7_NEW_p.jpg">제브라 마일드라이너 트윈형광펜 35가지 컬러 [WKT-7]</a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg">
-                        	<img src="https://pendepot.co.kr/web/product/medium/201705/4026_shop1_224403.jpg">
+                        	<img src="https://pendepot.co.kr/web/product/medium/202202/fa1adb0ace302c736760ab927e7de2c9.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">파버카스텔 블랙파버(블랙리드)</a></h6>
+                            <h6><a href="https://pendepot.co.kr//web/upload/pic2/pentel_smash_q1003-1005.jpg">펜텔 스매쉬 샤프 0.3/0.5mm</a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg">
-                        	<img src="https://pendepot.co.kr/web/product/medium/201705/4034_shop1_759807.jpg">
+                        	<img src="https://pendepot.co.kr/web/product/medium/202207/c2272faf7c1e0266e3a7f770a1e8c565.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">파버카스텔 카스텔9000 퍼펙트펜슬</a></h6>
+                            <h6><a href="https://pendepot.co.kr//web/upload/pic2/staedtler_925-35_Ltd_black_p.jpg">스테들러 샤프 925 35 블랙 0.5mm</a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg">
-                        	<img src="https://pendepot.co.kr/web/product/medium/munkushop_1508.jpg">
+                        	<img src="https://pendepot.co.kr/web/product/medium/201902/2bcd98f8e448670b72429ea70825f58c.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">미쯔비시 hi-uni 하이유니 전문가용 고급연필</a></h6>
+                            <h6><a href="https://pendepot.co.kr//web/upload/pic/zebra_delguard_05_p.png">제브라 델가드(심이 부러지지 않는 샤프) 0.5</a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg">
-                        	<img src="https://pendepot.co.kr/web/product/medium/201707/418_shop1_368752.jpg">
+                        	<img src="https://pendepot.co.kr/web/product/medium/202205/0b025af869be10b3b245f8baa26d6acb.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">스테들러 Mars Lumogrph 최고급연필</a></h6>
+                            <h6><a href="https://pendepot.co.kr//web/upload/pic2/pentel_graph_1000_p.jpg">펜텔그래프1000 샤프 for PRO  0.3/0.4/0.5/0.7/0.9mm  graph1000 [PG1003,1004,1005,1007,1009]</a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg">
-                        	<img src="https://pendepot.co.kr/web/product/medium/201707/2630_shop1_551559.jpg">
+                        	<img src="https://pendepot.co.kr/web/product/medium/202203/ba949f25880053a839022f82fd92b7fe.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">톰보 MONO-J 모노제이 (전문가용,미술용)연필</a></h6>
+                            <h6><a href="https://pendepot.co.kr//web/upload/pic2/uni_uniball-one_LTD5_city-pop_p.jpg">유니 유니볼 원 한정판 씨티팝 컬러 3색 세트</a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg">
-                        	<img src="https://pendepot.co.kr/web/product/medium/202205/b4d5e0292495579e6071b10c625f2413.jpg">
+                        	<img src="https://pendepot.co.kr/web/product/medium/202205/f472cd23e71e0069572ee4071c8b467c.jpg">
                         </div>
                         <div class="featured__item__text">
-                            <h6><a href="#">스테들러 마스 루모그라프 연필 틴케이스</a></h6>
+                            <h6><a href="https://pendepot.co.kr//web/upload/pic/uni_kurutoga_advance.jpg">미쯔비시 유니 쿠루토가 어드밴스 [M5-559]</a></h6>
                         </div>
                     </div>
                 </div>

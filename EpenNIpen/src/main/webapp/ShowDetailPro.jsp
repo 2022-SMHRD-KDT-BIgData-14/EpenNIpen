@@ -204,36 +204,53 @@ background-size: 300px 150px;
 					<div class="sidebar">	
 
 						<!-- 최근 본 상품 -->
+						
+<%
+				// 사용자가 클릭한 제품을 식별할 수 있는 제품명 통신
+				int prod_seq = Integer.parseInt(request.getParameter("prod_seq"));
+				TableDTO detail_num = new SearchDAO().showDetail(prod_seq);
+%> 
+
 
 						<div class="sidebar__item">
+						<% if(detail_num.getProd_seq() == 273 ){ %>
+		
 							<div class="latest-product__text">
-								<h4>최근 본 상품</h4>
+								<h4>제품 최저가</h4>
 								<div class="latest-product__slider owl-carousel">
 									<div class="latest-prdouct__slider__item">
-										<a href="#" class="latest-product__item">
+										<a href="https://www.coupang.com/vp/products/5862511582?itemId=10233795516&vendorItemId=81554436685&src=1032001&spec=10305201&addtag=400&ctag=5862511582&lptag=P5862511582&itime=20220803101038&pageType=PRODUCT&pageValue=5862511582&wPcid=16594890383087243690697&wRef=cr.shopping.naver.com&wTime=20220803101038&redirect=landing&isAddedCart=" class="latest-product__item">
 											<div class="latest-product__item__pic">
-												<img src="img/latest-product/lp-1.jpg" alt="">
+											
+												<img src="https://blog.kakaocdn.net/dn/6ui8u/btqDtzRrCzg/ZM8q87L5frjEl0za6UnIk1/img.jpg" alt="">
 											</div>
 											<div class="latest-product__item__text">
-												<h6>1열</h6>
+											<!-- <h6>5,040원</h6> -->
 											</div>
 										</a>
-										<!-- 최근 본 상품 더 보여주고 싶으면 여기에 a태그해서 추가 -->
+										<h4>5,040원</h4>
 									</div>
 									<div class="latest-prdouct__slider__item">
-										<a href="#" class="latest-product__item">
+										<a href="https://www.hmall.com/p/pda/itemPtc.do?ReferCode=429&slitmCd=2068711191&utm_source=naver&utm_medium=cps_pcs&utm_campaign=sale&NaPm=ct%3Dl6cwzr5c%7Cci%3D11acf5403c1738040ad90a75531eb3dd42bd227a%7Ctr%3Dslct%7Csn%3D14%7Chk%3Db7561b43325f7421aa1f9472d973755a8ab82e35" class="latest-product__item">
 											<div class="latest-product__item__pic">
-												<img src="img/latest-product/lp-1.jpg" alt="">
+												<img src="https://blog.kakaocdn.net/dn/bATAYv/btqBD2OfDwv/jI6jmfOkbiaQB1VUMArMZk/img.jpg" alt="">
 											</div>
 											<div class="latest-product__item__text">
-												<h6>2열</h6>
+												<!-- <h6>6,630원</h6> -->
 											</div>
 										</a>
+										<h4>6,630원</h4>
 										
-										<!-- 최근 본 상품 2열 ↑-->
 									</div>
 								</div>
 							</div>
+							
+							<%}else{ %>
+							<script>
+							$("#sidebar__item").remove();
+							</script>
+							
+							<%} %>
 						</div>
 					</div>
 				</div>
@@ -253,19 +270,8 @@ background-size: 300px 150px;
 							<div class="select-filter"> 
 							
 				
-<%
-				// 사용자가 클릭한 제품을 식별할 수 있는 제품명 통신
-				int prod_seq = Integer.parseInt(request.getParameter("prod_seq"));
-				TableDTO detail_num = new SearchDAO().showDetail(prod_seq);
-%> 
-			<table>
-				<tr>
-					<td><img src= "<%= detail_num.getImg() %>" ></td>
-					<td><h4><%= detail_num.getProduct() %></h4></td>
-				</tr>
-			
-			
-			</table>
+
+
 			<%-- <h4><%= detail_num.getProduct() %></h4> --%>
 <%-- 			<img src= "<%= detail_num.getImg() %>" > --%>
 			<img src= "<%= detail_num.getDescription_1() %>"> 

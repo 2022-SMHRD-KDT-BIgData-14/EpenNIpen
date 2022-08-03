@@ -498,10 +498,7 @@ filtertable {
 				console.log('순서 :'+i)
 				console.log('결과 : '+res[i])
 				
-				
-				
-				
-				
+				$("#showlist").remove();
 				$("#showlist").append("<div class='col-lg-3 col-md-6 col-sm-6'></div>");
 				$("#showlist .col-lg-3").last().append("<div class='product__item' ></div>");
 				$("#showlist .col-lg-3 .product__item").last().append("<div class='product__item__pic set-bg showimg"+i+"'></div>");
