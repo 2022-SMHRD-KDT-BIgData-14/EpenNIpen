@@ -13,6 +13,8 @@
 		<typeAlias type="model.SearchDTO" alias="SearchDTO" />
 		<typeAlias type="model.SurveyDTO" alias="SurveyDTO"/>
 		<typeAlias type="model.ProductDTO" alias="ProductDTO"/>
+		<typeAlias type="model.QuestionDTO" alias="QuestionDTO"/>
+		<typeAlias type="model.testDTO" alias="testDTO"/>
 	</typeAliases>
 
 	<environments default="development">
@@ -31,7 +33,7 @@
 		<mapper resource="mapper/SurveyMapper.xml"/>
 		<mapper resource="mapper/FilterMapper.xml" />
 		<mapper resource="mapper/SearchMapper.xml" />
-		<mapper resource="mapper/SurveyMapper.xml"/>
+		<mapper resource="mapper/QuestionMapper.xml"/>
 		<mapper resource="mapper/ProductMapper.xml"/>
 	</mappers>
 

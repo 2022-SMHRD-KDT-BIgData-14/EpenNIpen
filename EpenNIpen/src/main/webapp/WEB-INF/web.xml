@@ -58,6 +58,12 @@
   	<description></description>
   	<servlet-class>controller.Search</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>InsertQuestion</servlet-name>
+  	<display-name>InsertQuestion</display-name>
+  	<description></description>
+  	<servlet-class>controller.InsertQuestion</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>DeleteMemberService</servlet-name>
   	<url-pattern>/DeleteMemberService</url-pattern>
@@ -93,5 +99,9 @@
   <servlet-mapping>
   	<servlet-name>Search</servlet-name>
   	<url-pattern>/Search</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InsertQuestion</servlet-name>
+  	<url-pattern>/InsertQuestion</url-pattern>
   </servlet-mapping>
 </web-app>
