@@ -1,3 +1,4 @@
+<%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -42,7 +43,7 @@
 </head>
 
 <body>
-
+<% MemberDTO info = (MemberDTO)session.getAttribute("info");%>
     <!-- ----------------------제품설명
         blog -> Product-Des 로 바뀜 ------------------- -->
 
@@ -58,18 +59,45 @@
            <a href="#"><img src="img/logo.jpg" alt=""></a>
        </div>
        
-       <div class="header__top__right__auth">
-           <a href="join.jsp">Join</a>
-       </div>
-       <div class="header__top__right__auth">
-           <a href="login.jsp">Login</a>
-       </div>
-       <div class="header__top__right__auth">
-           <a href="#">Mypage</a>
-       </div>
-       <div class="humberger__menu__cart">
-           <a href="#"><i class="fa fa-heart"></i> </a>
-       </div>
+		<%
+		if(info == null) {
+		%>
+		<div class="header__top__right__auth">
+			<a><%=info.getName()%>님, 환영합니다.</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="join.jsp">Join</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="login.jsp">Login</a>
+		</div>
+		<%
+		} else if (info.getId().equals("admin")) {
+		%>
+		<div class="header__top__right__auth">
+			<a><%=info.getName()%>님, 환영합니다.</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="Logout">Logout</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="ShowMember.jsp">회원관리</a>
+		</div>
+		<%
+		} else {
+		%>
+		<div class="header__top__right__auth">
+			<a><%=info.getName()%>님, 환영합니다.</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="Logout">Logout</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="Mypage.jsp">Mypage</a>
+		</div>
+		<%
+		}
+		%>
        <div class="humberger__menu__widget">
 
 
@@ -99,18 +127,37 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="header__top__right">
+                            <%if(info==null){ %>
+	                        <div class="header__top__right__auth">
+								<a><%=info.getName()%>님, 환영합니다.</a>
+							</div>
                             <div class="header__top__right__auth">
                                 <a href="join.jsp">Join</a>
                             </div>
                             <div class="header__top__right__auth">
                                 <a href="login.jsp">Login</a>
                             </div>
+                            <% }else if(info.getId().equals("admin")){%>
                             <div class="header__top__right__auth">
-                                <a href="#">Mypage</a>
+								<a><%=info.getName()%>님, 환영합니다.</a>
+							</div>
+                            <div class="header__top__right__auth">
+                                <a href="Logout">Logout</a>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="ShowMember.jsp">회원관리</a>
                             </div>
+                            <%}else{ %>
+                            <div class="header__top__right__auth">
+								<a><%=info.getName()%>님, 환영합니다.</a>
+							</div>
+                            <div class="header__top__right__auth">
+                                <a href="Logout">Logout</a>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a href="Mypage.jsp">Mypage</a>
+                            </div>
+                            <%} %>
                         </div>
                     </div>
                 </div>

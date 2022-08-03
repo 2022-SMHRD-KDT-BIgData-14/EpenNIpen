@@ -1,3 +1,4 @@
+<%@page import="model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -38,7 +39,7 @@ filtertable {
 </head>
 
 <body>
-
+<% MemberDTO info = (MemberDTO)session.getAttribute("info");%>
 	<!-- ---------------상품 조회------------- -->
 
 	<!-- Page Preloder -->
@@ -52,12 +53,42 @@ filtertable {
 		<div class="humberger__menu__logo">
 			<a href="#"><img src="img/logo.jpg" alt=""></a>
 		</div>
+		<%
+		if(info == null) {
+		%>
 		<div class="header__top__right__auth">
-			<a href="#"><i class="fa fa-user"></i>로그인</a>
+			<a href="join.jsp">Join</a>
 		</div>
-		<div class="humberger__menu__cart">
-			<a href="#"><i class="fa fa-heart"></i> </a>
+		<div class="header__top__right__auth">
+			<a href="login.jsp">Login</a>
 		</div>
+		<%
+		} else if (info.getId().equals("admin")) {
+		%>
+		<div class="header__top__right__auth">
+			<a><%=info.getName()%>님, 환영합니다.</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="Logout">Logout</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="ShowMember.jsp">회원관리</a>
+		</div>
+		<%
+		} else {
+		%>
+		<div class="header__top__right__auth">
+			<a><%=info.getName()%>님, 환영합니다.</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="Logout">Logout</a>
+		</div>
+		<div class="header__top__right__auth">
+			<a href="Mypage.jsp">Mypage</a>
+		</div>
+		<%
+		}
+		%>
 		<div class="humberger__menu__widget"></div>
 		<nav class="humberger__menu__nav mobile-menu">
 			<ul>
@@ -87,12 +118,34 @@ filtertable {
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="header__top__right">
-							<div class="header__top__right__auth">
-								<a href="#"><i class="fa fa-user"></i> 로그인</a>
+                        <%if(info==null){ %>
+                            <div class="header__top__right__auth">
+                                <a href="join.jsp">Join</a>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a href="login.jsp">Login</a>
+                            </div>
+                            <% }else if(info.getId().equals("admin")){%>
+                            <div class="header__top__right__auth">
+								<a><%=info.getName()%>님, 환영합니다.</a>
 							</div>
-							<div class="header__top__right__auth">
-								<a href="#"><i class="fa fa-heart"></i></a>
+                            <div class="header__top__right__auth">
+                                <a href="Logout">Logout</a>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a href="ShowMember.jsp">회원관리</a>
+                            </div>
+                            <%}else{ %>
+                            <div class="header__top__right__auth">
+								<a><%=info.getName()%>님, 환영합니다.</a>
 							</div>
+                            <div class="header__top__right__auth">
+                                <a href="Logout">Logout</a>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <a href="Mypage.jsp">Mypage</a>
+                            </div>
+                            <%} %>
 						</div>
 					</div>
 				</div>
@@ -233,11 +286,11 @@ filtertable {
 							<h2>선택 분류</h2>
 						</div>
 						<div class="row">
-							<div class="select-filter"> 
+							<div class="col-lg-12"> 
 
 
 	<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
-								<div class="">
+								
 								<table class="table">
 									<tbody>
 										<tr>
@@ -376,9 +429,19 @@ filtertable {
 										</tr>
 									</tbody>
 								</table>
-								입력값  <input type="text" id="showFilter" />
-								<input
-									type="submit" value="검색" onclick="data()" />
+								<div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="filter-serarch">
+                                            <table class="filter-serarch-check">
+                                        <tr>
+                                            <th>선택된 필터</th>
+                                            <td><input class="fsc" type="text" id="showFilter" /></td>
+                                            <td><input type="submit" value="검색" onclick="data()" /></td>
+                                        </tr>
+                                        </table>
+                                    </div>
+                                </div>
+								</div>
 								</div>
 
 										<script>
@@ -434,22 +497,26 @@ filtertable {
 			console.log("필터 선택값 : ", ageVal);
 			console.log("필터 이름 : ", name);
 			// console.log("선택여부 : " + confirmCheck);
-
+			var filter_String;
 			// check true
 			if (confirmCheck == true) {
 				// console.log("check");
 				ageArr[name] = ageVal;
 				console.log(ageArr);
 				Json = JSON.stringify(ageArr);
-				showFilterValue.value += ( "▾" + ageVal +"  ");
+				filter_String = "▾" + ageVal +"  "
+				showFilterValue.value += filter_String;
+				console.log("filter_String : "+filter_String)
 				//$("#showFilter").last().append(ageVal); // check value filter 배열에 입력
 
 				// check false
 			} else {
 				console.log(ageArr)
 			/* 	ageArr.splice(ageArr.indexOf(ageVal), 1); // check value filter 배열내용 삭제             */
-			
-				$('#showFilter').val("")
+				console.log("filter_String전 : "+ageVal)
+				showFilterValue.value = showFilterValue.value.replace("▾" + ageVal +"  ", "")
+				console.log("filter_String후 : "+filter_String)
+				//$('#showFilter').val("")
 			}
 
 			//showFilterValue.value = ageVal; // textBox에 필터 배열 추가
@@ -484,18 +551,14 @@ filtertable {
 			})
 			
 		} 
-		
- 		var total = 0;
- 		var bottomSize = 0;
-		
+
 		function makeFormat(res){
-			
+			$("#showlist").empty();
 			for(var i=0; i<res.length; i++){	
 				console.log('순서 : '+i)
 				console.log('결과 : '+res[i])
 				console.log("res[i]_prod_seq: " + res[i].prod_seq)
 				
-				//$("#showlist").remove();
 				$("#showlist").append("<div class='col-lg-3 col-md-6 col-sm-6'></div>");
 				$("#showlist .col-lg-3").last().append("<div class='product__item' ></div>");
 				$("#showlist .col-lg-3 .product__item").last().append("<div class='product__item__pic set-bg showimg"+i+"'></div>");
@@ -503,9 +566,6 @@ filtertable {
 				$("#showlist .col-lg-3 .product__item").last().append("<div class='product__item__text'></div>");
 				$("#showlist .col-lg-3 .product__item .product__item__text").last().append("<h6></h6>");
 				$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href='ShowDetailFilPro.jsp?prod_seq="+ res[i].prod_seq + "'>" + res[i].product +"</a>");
-				/* $("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href=" + res[i].description_1 + ">" + res[i].product +"</a>"); */
-				//$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href=#>" + res[i].product +"</a>");
-				
 				$('#showFilter').val("")
 
 			}
@@ -518,15 +578,6 @@ filtertable {
 
 <!-- ----------------------------추천하기---------------------------- -->
 
-									</div>
-
-									<!-- <div class="product__discount__slider owl-carousel">
-                                <div id="product-filter" class="col-lg-4">
-                                    <div class="product__discount__item__pic set-bg"
-                                            data-setbg="img/logo.jpg">
-                                    </div>
-                                </div>
-                            </div> -->
 								</div>
 							</div>
 
@@ -664,13 +715,6 @@ filtertable {
 										</div>							
 							</div>
 
-							
-<!-- 							<div class="product__pagination">
-								<a href="#">1</a> <a href="#">2</a> <a href="#">3</a> 
-								<a href="#"><i class="fa fa-long-arrow-right"></i></a>
-							</div> -->
-							
-							
 						</div>
 					</div>
 				</div>

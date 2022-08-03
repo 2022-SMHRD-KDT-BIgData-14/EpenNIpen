@@ -196,7 +196,7 @@ filtertable {
 
 						<!-- 최근 본 상품 -->
 
-						<div class="sidebar__item">
+						<!-- <div class="sidebar__item">
 							<div class="latest-product__text">
 								<h4>최근 본 상품</h4>
 								<div class="latest-product__slider owl-carousel">
@@ -209,7 +209,7 @@ filtertable {
 												<h6>1열</h6>
 											</div>
 										</a>
-										<!-- 최근 본 상품 더 보여주고 싶으면 여기에 a태그해서 추가 -->
+										최근 본 상품 더 보여주고 싶으면 여기에 a태그해서 추가
 									</div>
 									<div class="latest-prdouct__slider__item">
 										<a href="#" class="latest-product__item">
@@ -221,11 +221,11 @@ filtertable {
 											</div>
 										</a>
 										
-										<!-- 최근 본 상품 2열 ↑-->
+										최근 본 상품 2열 ↑
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
@@ -237,11 +237,10 @@ filtertable {
 							<h2>선택 분류</h2>
 						</div>
 						<div class="row">
-							<div class="select-filter"> 
+							<div class="col-lg-12"> 
 
 
 	<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
-								<div class="">
 								<table class="table">
 									<tbody>
 										<tr>
@@ -380,11 +379,20 @@ filtertable {
 										</tr>
 									</tbody>
 								</table>
-								입력값  <input type="text" id="showFilter" />
-								<input
-									type="submit" value="검색" onclick="data()" />
+								<div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="filter-serarch">
+                                            <table class="filter-serarch-check">
+                                        <tr>
+                                            <th>선택된 필터</th>
+                                            <td><input class="fsc" type="text" id="showFilter" /></td>
+                                            <td><input type="submit" value="검색" onclick="data()" /></td>
+                                        </tr>
+                                        </table>
+                                    </div>
+                                </div>
 								</div>
-								
+								</div>
 								
   <script>
 		
@@ -479,6 +487,7 @@ filtertable {
 					}else{
 						alert("결과는 OK!")
 						makeFormat(res)
+						
 					}
 				},
 				error: function(e){
@@ -500,12 +509,12 @@ filtertable {
 
 		function makeFormat(res){
 			console.log("filter res:  " + res)
+			
+				$("#showlist").empty();
 			for(var i=0; i<res.length; i++){	
 				console.log('순서 : '+i)
 				console.log('결과 : '+res[i])
 				console.log("res[i]_prod_seq: " + res[i].prod_seq)
-				
-				//$("#showlist").remove();
 				
 				$("#showlist").append("<div class='col-lg-3 col-md-6 col-sm-6'></div>");
 				$("#showlist .col-lg-3").last().append("<div class='product__item' ></div>");
@@ -516,10 +525,11 @@ filtertable {
 				$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href='ShowDetailFilPro.jsp?prod_seq="+ res[i].prod_seq + "'>" + res[i].product +"</a>");
 				/* $("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href=" + res[i].description_1 + ">" + res[i].product +"</a>"); */
 				//$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href=#>" + res[i].product +"</a>");
-				
-				$('#showFilter').val("")
+				$('#showFilter').val("");
+				//$("#showlist").remove();
 
 			}
+			
 	
 		}	
 		</script> 
@@ -532,8 +542,6 @@ filtertable {
 
 
 <!-- ----------------------------추천하기---------------------------- -->
-
-									</div>
 
 									<!-- <div class="product__discount__slider owl-carousel">
                                 <div id="product-filter" class="col-lg-4">
@@ -702,7 +710,7 @@ filtertable {
 		console.log("search_list: ", search_list)
 		console.log("search_list: ", search_list[0].product)
 		console.log("search_list: ", search_list[0].img)
-
+		
 		for(var i = 0 ; i<search_list.length; i++){
  			console.log("search_list: ", search_list[i].product)
 			console.log("search_list: ", search_list[i].img) 
@@ -716,8 +724,8 @@ filtertable {
 			$("#showlist .col-lg-3 .product__item").last().append("<div class='product__item__text'></div>");
 			$("#showlist .col-lg-3 .product__item .product__item__text").last().append("<h6></h6>");
 			$("#showlist .col-lg-3 .product__item .product__item__text h6").last().append("<a href='ShowDetailPro.jsp?prod_seq="+ search_list[i].prod_seq + "'>" + search_list[i].product +"</a>");
-			name = search_list[i].product
-			$('#showFilter').val("")
+			$('#showFilter').val("");
+			//$("#showlist").remove();
 
 	}
 

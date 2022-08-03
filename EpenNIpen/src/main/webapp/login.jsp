@@ -180,7 +180,7 @@
         <label>
             <!-- <span>PW</span> -->
         <p style="text-align: left; font-size:15px; color:#666">Password </p>
-        <input type="text" placeholder="비밀번호를 입력" class="size" name="pw">
+        <input type="password" placeholder="비밀번호를 입력" class="size" name="pw">
         <!-- <input type="submit" value="확인"> -->
     </label>
     <br><br>

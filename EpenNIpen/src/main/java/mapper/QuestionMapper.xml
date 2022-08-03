@@ -9,6 +9,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  	insert into Question values(q_seq.nextval, #{id}, #{answer})
  </insert>
 
+<!-- 로그인한 계정의 드림펜찾기 result창 노출 -->
+<select id="QuestionResult" parameterType="String" resultType="QuestionDTO">
+	select * from(select * from question where id=#{id} order by q_seq desc) where rownum&lt;=1
+</select>
+
 <!-- 로그인한 계정의 드림펜찾기 내역 조회 -->
 <select id="MyQuestion" parameterType="String" resultType="QuestionDTO">
 	select * from Question where id=#{id} order by R_date desc

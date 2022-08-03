@@ -29,7 +29,7 @@
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
-<<<<<<< HEAD
+
 /* 회원가입 */
 /* @import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css'); */
 
@@ -3481,7 +3481,6 @@ Contact -> Page-Sat 으로 바꿈
 		background-color: #3CC032;
 	}
 	
-=======
 
 
 html,
@@ -6869,5 +6868,5 @@ Contact -> Page-Sat 으로 바꿈
 	.blog__details__hero__text h2 {
 		font-size: 24px;
 	}
->>>>>>> branch 'main' of https://github.com/2022-SMHRD-KDT-BIgData-14/EpenNIpen.git
+}
 }
