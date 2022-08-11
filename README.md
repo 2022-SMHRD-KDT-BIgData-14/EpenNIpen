@@ -22,7 +22,8 @@
   
   
 # 3. 서비스 흐름도
-![image](https://user-images.githubusercontent.com/106059465/183618466-2347ae56-6d95-4188-aad5-956b5131861d.png)
+![image](https://user-images.githubusercontent.com/106059465/184067668-173f5292-961d-4e56-9b32-ec394761b203.png)
+
   
   
 ---
